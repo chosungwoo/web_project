@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang ="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>SupportMain</title>
+		<link href="./stylesheets/reset.css" rel="stylesheet" type="text/css">
+		<link href="./stylesheets/main.css" rel = "stylesheet" type="text/css">
+		<script src = 'jquery-1.8.2.min.js'></script>
+		<script type="text/javascript">
+			function numberOfDays(year, month) {
+			  var days;
+				if ((month == 1) || (month == 3) || (month == 5) || (month == 7) || (month == 8) || (month == 10) || (month == 12)) 
+				  	days = 31;
+				else if ((month == 4) || (month == 6) || (month == 9) || (month == 11)) 
+					days = 30;
+				else if (month == 2) {   //윤년
+					
+					if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) 
+						days = 29;
+					else 
+						days = 28;
+			  	}
+			  	return days;
+			}
+			function showCalendar(year, month){
+ 				str="";
+				var firstDate = new Date(year, month-1, 1);
+				var firstDay = firstDate.getDay();
+				str+="<center>";
+			
+				str+="<h2>" + year + "년" + month + "월" + "</h2><p>";
+				str+="<TABLE>";
+				//요일
+				str+="<TR><TH BGCOLOR = 'red'>일 </TH>";
+				str+="<TH> 월 </TH><TH> 화 </TH>";
+				str+="<TH> 수 </TH><TH> 목 </TH>";
+				str+="<TH> 금 </TH><TH BGCOLOR = 'blue'> 토 </TH>";
+   				//일주일
+   				col = 0;
+   				//빈공간
+   				str+="<TR>";
+   				for (i=0; i<firstDay; i++) {
+        			str+="<TD> </TD>";
+        			col++;
+   				}
+   				str+="<FORM>";
+ 				ed=numberOfDays(year, month);
+   				for (i=1; i<=ed; i++) { //날짜 
+        			str+="<TD>";
+        			
+        			if (i < 10)
+           				str+="<INPUT TYPE='button' VALUE=" + "' " + i + "'>";
+        			else
+    					str+="<INPUT TYPE='button' VALUE=" + i + ">";
+        				str+="</TD>";
+        				col++;
+        			if (col == 7) {   //새로운 행
+      					str+="</TR>";
+     					col = 0;
+ 					}
+    			}
+    			str+="</FORM>";
+			    str+="</TABLE>";
+			    str+="</CENTER>";
+ 				document.getElementById('header_right').innerHTML=str;
+ 				
+
+ 				function popup(url,intWidth,intHeight){
+ 					window.open(url,"_blank","width="+intWidth+",height="+intHeight+",resizeable=1,scrollbars=1");
+ 				}
+    		}
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="top">
+				<ul>
+					<div id="top_left">
+						<li><a href = "main.html"><!--<img src="./images/logo.png" width="120" height="40" alt="logo">--></a></li>
+						<li><a href = "Create.html">Create</a></li>
+						<li><a href = "Join.html">Join</a></li>
+					</div>
+					<div id="top_right">
+						<li><a href = "join.html">Sign up</a></li>
+						<li><a href = "login.html">Log in</a></li>
+					</div>
+				</ul>
+			</div>
+			<div id="header">
+
+				<div id="header_left">
+					</br></br></br>
+						Support</br></br>
+						Baseball</br></br>
+						Service</br></br>					
+				</div>
+				<div id="header_right" class="header">
+					
+					<script type="text/javascript">
+    					today = new Date();
+						Y=today.getFullYear(); 
+  						M=today.getMonth()+1; 
+           				showCalendar(Y, M);
+						function cngCal(v1,v2){
+						  	if(v1==0){
+						   		Y=eval(Y+v2);
+						  	} else {
+						   		M=eval(M+v2);
+						   	if(M>12) {Y++;M=1;}
+						   	if(M<1) {Y--;M=12;}
+						  	}
+						  	showCalendar(Y, M);
+						}
+					</script>	
+					<center>	
+					<!--연도변경  <input type="button" value="<" onclick=cngCal(0,-1)><input type="button" value=">" onclick=cngCal(0,1)> </br>
+					월　변경   <input type="button" value="<" onclick=cngCal(1,-1)><input type="button" value=">" onclick=cngCal(1,1)> -->
+				</center>
+					<a href="javascript:popup("main.html",'400','200')">
+						클릭</a>
+
+				</div>				
+			</div>
+			<div id="content">
+				<div id="main_content">
+					<div id="home_area">
+						<ul>
+							<li><a href="#"><img src = "./images/samsung.jpg" alt="samsung" width="300" height="150"></a>
+							</li>
+							<li><a href="#"><img src = "./images/lotte.png" alt="lotte" width="300" height="150"></a>
+							</li>
+							<li><a href="#"><img src = "./images/doosan.jpg" alt="doosan" width="300" height="150"></a>
+							</li>
+							<li><a href="#"><img src = "./images/kia.jpg" alt="kia" width="300" height="150"></a>
+							</li>
+						</ul>
+					</div>
+					<div id="verse">
+						<img src="./images/vs.png" alt="verse" width="160" height="50">
+					</div>
+					<div id="away_area">
+						<ul>
+						
+							<li><a href="#"><img src = "./images/hanhwa.jpg" alt="hanhwa" width="300" height="150"></a>
+							</li>
+							<li><a href="#"><img src = "./images/lg.jpg" alt="lg" width="300" height="150"></a>
+							</li>
+							<li><a href="#"><img src = "./images/nexen.jpg" alt="nexen" width="300" height="150"></a>
+							</li>
+							<li><a href="#"><img src = "./images/sk.gif" alt="sk" width="300" height="150"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="sub_content">
+
+				</div>
+			</div>
+			<div id="footer">
+				<p>사이트 소개 | 이용약관 | 개인정보취급방침 | 책임의 한계와 법적 |
+					<p>
+						Copyright ⓒ MJUCafe. All rights reserved
+					</p>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+$(function() {
+	$("home_area li").val("toggle").click(function() {
+		$("div.home_area:first").toggle();
+	});
+	$("#btn2").val("slide up").click(function() {
+		$("div.section:first").slideUp();
+	});
+	$("#btn3").val("slide down").click(function() {
+		$("div.section:first").slideDown();
+	});
+	// text / html 읽기
+	$("#result").append($("#fruits").html() + "<p>");
+	$("#result").append($("#fruits").text() + "<p>");
+	
+	// value 읽기
+	$("#result").append($("#channel").val() + "<p>");
+
+	// CSS 읽기
+	$("#result").append($("a:last").css("margin-top") + "<p>");
+	
+	// Attribute 읽기
+	$("a").each(function(idx) {
+		$("#result").append("a" + idx + ":" + $(this).attr("href")+ "<br>");
+	});
+	
+	// value 설정
+	$("#id").val("아이디");
+	$("#pwd").val("123");
+	
+	// Attribute 설정
+	$("input[type='checkbox']").filter("[value='soccer']")
+	   .attr('checked', 'checked');
+		 
+	// text 설정
+	$("#fruits").find("li:first").text("사과");
+	
+	// click event + effect
+
+	$("#btn2").val("slide up").click(function() {
+		$("div.section:first").slideUp();
+	});
+	$("#btn3").val("slide down").click(function() {
+		$("div.section:first").slideDown();
+	});
+	
+	// mouse event
+	$("div.section").mouseover(function() {
+		$(this).css("background", "#f8dff5");
+	});
+	
+	$("div.section").mouseout(function() {
+		$(this).css("background", "#ffffff");
+	});
+	
+	// change event
+	$("#channel").change(function() {
+		alert("You selected '" + $(this).val() + "'");
+	});
+});
+</script>

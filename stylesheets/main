@@ -1,0 +1,14 @@
+html{
+	color : #000;
+	background : #00A67C;
+	padding : 20px 0;
+	font : 12px/18px "맑은 고딕", "Malgun Gothic", "굴림","Gulim", Verdan;
+}
+/* Basic */
+h1{font-size : 14px; line-height : 28px; font-weight : bold;}
+h2{font-size : 12px; line-height : 24px; font-weight : bold;}
+a:visited, a:link {color:#C20A00; text-decoration:none;}
+a:hover, a:active{color:#C23700;}
+
+/* layout */
+#wrap {width:960px; margin:0 auto; background-color: #00A67C}
