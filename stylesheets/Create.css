@@ -1,0 +1,73 @@
+html{
+	color : #000;
+	background : #eee;
+	padding : 20px 0;
+	font : 12px/18px "돋움", "Malgun Gothic", "굴림","Gulim", Verdan;
+}
+/* Basic */
+h1{font-size : 14px; line-height : 28px; font-weight : bold;}
+h2{font-size : 12px; line-height : 24px; font-weight : bold;}
+a:visited, a:link {color:#C20A00; text-decoration:none;}
+a:hover, a:active{color:#C23700;}
+
+/* layout */
+#wrap {width:960px; margin:0 auto; background-color: #eee;}
+
+/* top */
+#top{
+	width: 960px;
+	height: 40px;
+	background-color: #eee;
+
+}
+#top ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#top_left li{
+	float: left;
+}
+#top_right li{
+	float: right;
+}
+#top img{
+	border:none;
+}
+#top ul li a{
+	color:#ff4f00; 
+	background-color: #eee;
+	display:block;
+	width:120px;
+	text-align: center;
+	padding: 0;
+	font: bold 20px/30px Tahoma;
+	text-decoration:none;
+	
+}
+#top a:hover{background-color: #eee;}
+
+/* content */
+#content { 
+	width:960px;
+	height:700px;
+	background-color: #fff;
+	float:left;
+}
+
+#content .form{
+	line-height: 20px;
+	padding: 10px 2px;
+}
+#content .btn{
+	float:left;
+}
+/* -- footer -- */
+#footer{
+	
+	background-color: #eee; 
+	color: #ff4f00; 
+	border:1;
+	text-align: center; 
+	padding: 20px;
+}

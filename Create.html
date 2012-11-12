@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang ="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>SupportCreate</title>
+		<link href="./stylesheets/main.css" rel = "stylesheet" type="text/css">
+		<link href="./stylesheets/Create.css" rel = "stylesheet" type="text/css">
+		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="top">
+				<ul>
+					<div id="top_left">
+						<li><a href = "main.html"><img src="./images/logo.jpg" width="120" height="40" alt="logo"></a></li>
+						<li><a href = "Create.html">Create</a></li>
+						<li><a href = "Join.html">Join</a></li>
+					</div>
+					<div id="top_right">
+						<li><a href = "join.html">Sign up</a></li>
+						<li><a href = "login.html">Log in</a></li>
+					</div>
+				</ul>
+			</div>
+			<div id="content">
+				<div id="title" class="form">
+					모임 제목 : <input type="text" name="title">
+				</div>
+				<div id="team" class="form">
+					팀 : <select name="team">
+						<option value="SK">SK</option>
+						<option value="Samsung">삼성</option>
+						<option value="KIA">기아</option>
+						<option value="Hanwha">한화</option>
+						<option value="Lotte">롯데</option>
+						<option value="Doosan">두산</option>
+						<option value="Nexen">넥센</option>
+						<option value="LG">LG</option>
+					</select>
+				</div>
+				<div id="date" class="form">
+					날짜 : <input name="date" type="text" id="calendar" size="8" maxlength="8" title="날짜">
+				</div>
+				<div id="summary" class="form">
+					모임 요약 : <textarea rows="2" cols="50"></textarea>
+				</div>
+				<div id="schedule" class="form">
+					일정 : <textarea rows="10" cols="50"></textarea>
+				</div>
+				<div id="pic" class="form">
+					사진 : <input type="file" name="pic"/>
+				</div>
+				<div id="map" class="form">
+					장소 : <!--http://devlee.co.kr/150101103149-->
+				</div>
+				<div id="submit" class="btn">
+					<input type="submit" value="작성 완료"/>
+				</div>
+				<div id="rewrite" class="btn">
+					<input type="button" value="다시 작성"/>
+				</div>
+				<div id="cancel" class="btn">
+					<input type="button" value="취소"/>
+				</div>
+			</div>
+			<div id="footer">
+				<p>사이트 소개 | 이용약관 | 개인정보취급방침 | 책임의 한계와 법적 |
+					<p>
+						Copyright ⓒ MJUCafe. All rights reserved
+					</p>
+			</div>
+		</div>
+	</body>
+</html>
+
+//일정
+<script language="javascript" type="text/javascript">
+  $(document).ready(function() {
+  var clareCalendar = {
+   monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+   dayNamesMin: ['일','월','화','수','목','금','토'],
+   weekHeader: 'Wk',
+   dateFormat: 'yymmdd', //형식(20120303)
+   autoSize: false, //오토리사이즈(body등 상위태그의 설정에 따른다)
+   changeMonth: true, //월변경가능
+   changeYear: true, //년변경가능
+   showMonthAfterYear: true, //년 뒤에 월 표시
+   //buttonImageOnly: true, //이미지표시
+   buttonText: '날짜선택', //버튼 텍스트 표시
+   //buttonImage: './images/calbtn.png', //이미지주소
+   showOn: "both", //엘리먼트와 이미지 동시 사용(both,button)
+   yearRange: '2012:2020' //2012년부터 2020년까지
+  };
+  $("#calendar").datepicker(clareCalendar);
+  $("img.ui-datepicker-trigger").attr("style","margin-left:5px; vertical-align:middle; cursor:pointer;"); //이미지버튼 style적용
+  $("#ui-datepicker-div").hide(); //자동으로 생성되는 div객체 숨김  
+  });
+</script>
+
