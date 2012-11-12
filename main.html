@@ -5,7 +5,9 @@
 		<title>SupportMain</title>
 		<link href="./stylesheets/reset.css" rel="stylesheet" type="text/css">
 		<link href="./stylesheets/main.css" rel = "stylesheet" type="text/css">
+		<link href="./stylesheets/bootstrap.css" rel = "stylesheet" type="text/css">
 		<script src = 'jquery-1.8.2.min.js'></script>
+		<script src = 'bootstrap.min.js'></script>
 		<script type="text/javascript">
 			function numberOfDays(year, month) {
 			  var days;
@@ -69,7 +71,22 @@
  					window.open(url,"_blank","width="+intWidth+",height="+intHeight+",resizeable=1,scrollbars=1");
  				}
     		}
+
 		</script>
+		<!-- Modal -->
+					<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  						<div class="modal-header">
+    						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    						<h3 id="myModalLabel">Modal header</h3>
+ 						</div>
+	  					<div class="modal-body">
+	   						<p>One fine body…</p> 
+	  					</div>
+	 					<div class="modal-footer">
+						    <button class="btn btn-primary">Log in</button>
+						    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+						</div>
+					</div>
 	</head>
 	<body>
 		<div id="wrap">
@@ -81,21 +98,17 @@
 						<li><a href = "Join.html">Join</a></li>
 					</div>
 					<div id="top_right">
-						<li><a href = "join.html">Sign up</a></li>
-						<li><a href = "login.html">Log in</a></li>
+						<li><a href = "sign.html">Sign up</a></li>
+						<li><a href="#myModal" role="button" data-toggle="modal">Login</a></li>
 					</div>
 				</ul>
 			</div>
 			<div id="header">
 
 				<div id="header_left">
-					</br></br></br>
-						Support</br></br>
-						Baseball</br></br>
-						Service</br></br>					
+					<a href = "main.html"><img src = "./images/logo-3.jpg" height="200" width="400"></a>
 				</div>
 				<div id="header_right" class="header">
-					
 					<script type="text/javascript">
     					today = new Date();
 						Y=today.getFullYear(); 
@@ -153,11 +166,12 @@
 					</div>
 				</div>
 				<div id="sub_content">
-
+					<!-- Button to trigger modal -->
 				</div>
 			</div>
+				
 			<div id="footer">
-				<p>사이트 소개 | 이용약관 | 개인정보취급방침 | 책임의 한계와 법적 |
+				<p>사이트 소개 | 이용약관 | 개인정보취급방침 | 책임의 한계와 법적 |</p>
 					<p>
 						Copyright ⓒ MJUCafe. All rights reserved
 					</p>
@@ -165,64 +179,3 @@
 		</div>
 	</body>
 </html>
-<script type="text/javascript">
-$(function() {
-	$("home_area li").val("toggle").click(function() {
-		$("div.home_area:first").toggle();
-	});
-	$("#btn2").val("slide up").click(function() {
-		$("div.section:first").slideUp();
-	});
-	$("#btn3").val("slide down").click(function() {
-		$("div.section:first").slideDown();
-	});
-	// text / html 읽기
-	$("#result").append($("#fruits").html() + "<p>");
-	$("#result").append($("#fruits").text() + "<p>");
-	
-	// value 읽기
-	$("#result").append($("#channel").val() + "<p>");
-
-	// CSS 읽기
-	$("#result").append($("a:last").css("margin-top") + "<p>");
-	
-	// Attribute 읽기
-	$("a").each(function(idx) {
-		$("#result").append("a" + idx + ":" + $(this).attr("href")+ "<br>");
-	});
-	
-	// value 설정
-	$("#id").val("아이디");
-	$("#pwd").val("123");
-	
-	// Attribute 설정
-	$("input[type='checkbox']").filter("[value='soccer']")
-	   .attr('checked', 'checked');
-		 
-	// text 설정
-	$("#fruits").find("li:first").text("사과");
-	
-	// click event + effect
-
-	$("#btn2").val("slide up").click(function() {
-		$("div.section:first").slideUp();
-	});
-	$("#btn3").val("slide down").click(function() {
-		$("div.section:first").slideDown();
-	});
-	
-	// mouse event
-	$("div.section").mouseover(function() {
-		$(this).css("background", "#f8dff5");
-	});
-	
-	$("div.section").mouseout(function() {
-		$(this).css("background", "#ffffff");
-	});
-	
-	// change event
-	$("#channel").change(function() {
-		alert("You selected '" + $(this).val() + "'");
-	});
-});
-</script>
