@@ -1,0 +1,25 @@
+h1{font-size : 14px; line-height : 28px; font-weight : bold;}
+
+#sign_up {
+	text-align:center;
+}
+#sign_up table{
+	
+	color:#ff4f00; 
+	background-color: #eee;
+	display:block;
+	padding: 10px 50px 10px 30px;
+	font: bold 20px/30px Tahoma;
+	text-decoration:none;
+
+}
+#sign_up th {
+	width: 140px;
+	text-align: left;
+}
+#sign_up h1{
+	text-align: center;
+	color:#ff4f00;
+	font: bold 30px/50px Tahoma;
+
+}

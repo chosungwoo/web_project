@@ -5,6 +5,7 @@
 		<title>SupportMain</title>
 		<link href="./stylesheets/reset.css" rel="stylesheet" type="text/css">
 		<link href="./stylesheets/main.css" rel = "stylesheet" type="text/css">
+		<link href="./stylesheets/sign.css" rel = "stylesheet" type="text/css">
 		<script src = 'jquery-1.8.2.min.js'></script>
 		<script type="text/javascript">
 			function numberOfDays(year, month) {
@@ -123,37 +124,42 @@
 			</div>
 			<div id="content">
 				<div id="main_content">
-					<div id="home_area">
-						<ul>
-							<li><a href="#"><img src = "./images/samsung.jpg" alt="samsung" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/lotte.png" alt="lotte" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/doosan.jpg" alt="doosan" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/kia.jpg" alt="kia" width="300" height="150"></a>
-							</li>
-						</ul>
-					</div>
-					<div id="verse">
-						<img src="./images/vs.png" alt="verse" width="160" height="50">
-					</div>
-					<div id="away_area">
-						<ul>
+					<div id="sign_up">
+						<h1> 회원가입 </h1><br/>
+						<table border="0">
 						
-							<li><a href="#"><img src = "./images/hanhwa.jpg" alt="hanhwa" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/lg.jpg" alt="lg" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/nexen.jpg" alt="nexen" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/sk.gif" alt="sk" width="300" height="150"></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div id="sub_content">
-
+						<tr>
+							<th>이름</th>
+							<td>
+							<input type="text"/></td>
+						</tr>
+						<tr>
+							<th>성별</th>
+							<td><input type="radio" name="sex" value="m"/>남
+								<input type="radio" name="sex" value="f"/>여
+							</td>
+						</tr>
+						<tr>
+							<th>아이디</th>
+							<td><input type="text"/>
+							<input type="button" value="중복확인"/>
+						</td>
+						</tr>
+						<tr>
+							<th>비밀번호</th> 
+							<td><input type="text"/></td>
+						</tr>
+						<tr>
+							<th>비밀번호 확인</th>
+							<td><input type="text"/></td>
+						</tr>
+						<tr>
+							<th>프로필 사진</th>
+							<td><input type="text"/>
+								<input type="button" value="찾아보기"/>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 			<div id="footer">
