@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang ="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>SupportMain</title>
+		<link href="./stylesheets/Create.css" rel = "stylesheet" type="text/css">
+		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+		<link href="./stylesheets/reset.css" rel="stylesheet" type="text/css">
+		<link href="./stylesheets/main.css" rel = "stylesheet" type="text/css">
+		<link href="./stylesheets/bootstrap.css" rel = "stylesheet" type="text/css">
+		<script src = 'bootstrap.min.js'></script>
+		
+		<!-- Modal -->
+		<div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel">로그인</h3>
+				</div>
+				<div class="modal-body">
+					
+					<h1 style="text-align:center">Log In</h1><br>
+					<table border="0" style="margin:auto">
+					<tr>
+					<th>ID</th>
+					<td><input name="user_id" type="text" class="inputText" id="id" /></td>
+					</tr>
+
+					<tr>
+					<th>Password</th>
+					<td><input name="password" type="text" class="inputText" id="pw" /></td>
+					</tr>
+
+					</tbody>
+					</table>
+					<br><br>
+					<center>
+						<div border="0" style="margin:auto">
+							<span class="loginButton"><input name="login" type="submit" value="로그인" /></span>
+							<span class="JoinButton"><input name="Join" type="submit" value="회원가입"/></span>	
+						</div>
+					</center>	
+				</div>
+				<div class="modal-footer">
+			    <button class="btn btn-primary">Log in</button>
+			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+		<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel">회원가입</h3>
+				</div>
+				<div class="modal-body">
+					<div id="sign_up">
+						<center>
+						<h1> 회원가입 </h1><br/>
+						<table border="0">
+						
+							<tr>
+								<th>이름</th>
+								<td>
+								<input type="text"/></td>
+							</tr>
+							<tr>
+								<th>성별</th>
+								<td><input type="radio" name="sex" value="m"/>남
+									<input type="radio" name="sex" value="f"/>여
+								</td>
+							</tr>
+							<tr>
+								<th>아이디</th>
+								<td><input type="text"/>
+								<input type="button" value="중복확인"/>
+							</td>
+							</tr>
+							<tr>
+								<th>비밀번호</th> 
+								<td><input type="password"/></td>
+							</tr>
+							<tr>
+								<th>비밀번호 확인</th>
+								<td><input type="password"/></td>
+							</tr>
+							<tr>
+								<th>프로필 사진</th>
+								<td><input type="text"/>
+									<input type="button" value="찾아보기"/>
+								</td>
+							</tr>
+						</table>
+						</center>
+					</div>
+				</div>
+				<div class="modal-footer">
+			    <button class="btn btn-primary">OK</button>
+			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="top">
+				<ul>
+					<div id="top_left">
+						<li><a href = "main.html"><!--<img src="./images/logo.png" width="120" height="40" alt="logo">--></a></li>
+						<li><a href = "Create.html">Create</a></li>
+						<li><a href = "Join.html">Join</a></li>
+					</div>
+					<div id="top_right">
+						<li><a href="#myModal2" role="button" data-toggle="modal">Sign up</a></li>
+						<li><a href="#myModal1" role="button" data-toggle="modal">Login</a></li>
+					</div>
+				</ul>
+			</div>
+			<div id="header">
+
+							
+			</div>
+			<div id="content">
+				<div id="title" class="form">
+					모임 제목 : <input type="text" name="title">
+				</div>
+				<div id="team" class="form">
+					팀 : <select name="team">
+						<option value="SK">SK</option>
+						<option value="Samsung">삼성</option>
+						<option value="KIA">기아</option>
+						<option value="Hanwha">한화</option>
+						<option value="Lotte">롯데</option>
+						<option value="Doosan">두산</option>
+						<option value="Nexen">넥센</option>
+						<option value="LG">LG</option>
+					</select>
+				</div>
+				<div id="date" class="form">
+					날짜 : <input name="date" type="text" id="calendar" size="8" maxlength="8" title="날짜">
+				</div>
+				<div id="summary" class="form">
+					모임 요약 : <textarea rows="2" cols="50"></textarea>
+				</div>
+				<div id="schedule" class="form">
+					일정 : <textarea rows="10" cols="50"></textarea>
+				</div>
+				<div id="pic" class="form">
+					사진 : <input type="file" name="pic"/>
+				</div>
+				<div id="map" class="form">
+					장소 : <!--http://devlee.co.kr/150101103149-->
+				</div>
+				<div id="submit" class="btn">
+					<input type="submit" value="작성 완료"/>
+				</div>
+				<div id="rewrite" class="btn">
+					<input type="button" value="다시 작성"/>
+				</div>
+				<div id="cancel" class="btn">
+					<input type="button" value="취소"/>
+				</div>
+			</div>
+			<div id="footer">
+				<p>사이트 소개 | 이용약관 | 개인정보취급방침 | 책임의 한계와 법적 |</p>
+					<p>
+						Copyright ⓒ MJUCafe. All rights reserved
+					</p>
+			</div>
+		</div>
+	</body>
+</html>
+<script language="javascript" type="text/javascript">
+  $(document).ready(function() {
+	  var clareCalendar = {
+	   monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	   dayNamesMin: ['일','월','화','수','목','금','토'],
+	   weekHeader: 'Wk',
+	   dateFormat: 'yymmdd', //형식(20120303)
+	   autoSize: false, //오토리사이즈(body등 상위태그의 설정에 따른다)
+	   changeMonth: true, //월변경가능
+	   changeYear: true, //년변경가능
+	   showMonthAfterYear: true, //년 뒤에 월 표시
+	   //buttonImageOnly: true, //이미지표시
+	   buttonText: '날짜선택', //버튼 텍스트 표시
+	   //buttonImage: './images/calbtn.png', //이미지주소
+	   showOn: "both", //엘리먼트와 이미지 동시 사용(both,button)
+	   yearRange: '2012:2020' //2012년부터 2020년까지
+  };
+	  $("#calendar").datepicker(clareCalendar);
+	  $("img.ui-datepicker-trigger").attr("style","margin-left:5px; vertical-align:middle; cursor:pointer;"); //이미지버튼 style적용
+	  $("#ui-datepicker-div").hide(); //자동으로 생성되는 div객체 숨김  
+	  });
+
+	  $("#btn2").click(function(){
+	  	alert("메인페이지에서 사용해주세요");
+	  });
+</script>
+
+

@@ -171,7 +171,7 @@
 					<div id="top_left">
 						<li><a href = "main.html"><!--<img src="./images/logo.png" width="120" height="40" alt="logo">--></a></li>
 						<li><a href = "Create.html">Create</a></li>
-						<li><a href = "join.html">Join</a></li>
+						<li><a href = "Join.html">Join</a></li>
 					</div>
 					<div id="top_right">
 						<li><a href="#myModal2" role="button" data-toggle="modal">Sign up</a></li>
@@ -181,65 +181,66 @@
 			</div>
 			<div id="header">
 
-				<div id="header_left">
-					<a href = "main.html"><img src = "./images/logo-3.jpg" height="200" width="400"></a>
-				</div>
-				<div id="header_right" class="header">
-					<input type="button" value="<" onclick=cngCal(0,-1)><input type="button" value=">" onclick=cngCal(0,1)> 
-					<input type="button" value="<" onclick=cngCal(1,-1)><input type="button" value=">" onclick=cngCal(1,1)> 
-					<script type="text/javascript">
-    					today = new Date();
-						Y=today.getFullYear(); 
-  						M=today.getMonth()+1; 
-           				showCalendar(Y, M);
-						function cngCal(v1,v2){
-						  	if(v1==0){
-						   		Y=eval(Y+v2);
-						  	} else {
-						   		M=eval(M+v2);
-						   	if(M>12) {Y++;M=1;}
-						   	if(M<1) {Y--;M=12;}
-						  	}
-						  	showCalendar(Y, M);
-						}
-
-					</script>	
-				</div>				
+							
 			</div>
 			<div id="content">
-				<div id="main_content">
-					<div id="home_area">
-						<ul>
-							<li><a href="#"><img src = "./images/samsung.jpg" alt="samsung" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/lotte.png" alt="lotte" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/doosan.jpg" alt="doosan" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/kia.jpg" alt="kia" width="300" height="150"></a>
-							</li>
-						</ul>
-					</div>
-					<div id="verse">
-						<img src="./images/vs.png" alt="verse" width="160" height="50">
-					</div>
-					<div id="away_area">
-						<ul>
-						
-							<li><a href="#"><img src = "./images/hanhwa.jpg" alt="hanhwa" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/lg.jpg" alt="lg" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/nexen.jpg" alt="nexen" width="300" height="150"></a>
-							</li>
-							<li><a href="#"><img src = "./images/sk.gif" alt="sk" width="300" height="150"></a>
-							</li>
-						</ul>
-					</div>
+				<div id="filtering">
+					<table border="0">
+						<tr>
+							<th><input type="search" name="search" value="검색할 지역은?"></th>
+						</tr>
+						<tr>
+							<th>지역</th>
+						</tr>
+						<tr>
+							<td>서울</td>
+						</tr>
+						<tr>
+							<td>대전</td>
+						</tr>
+						<tr>
+							<td>대구</td>
+						</tr>
+						<tr>
+							<td>부산</td>
+						</tr>
+						<tr>
+							<th>야구팀</th>
+						</tr>
+						<tr>
+							<td>삼성</td>
+						</tr>
+						<tr>
+							<td>롯데</td>
+						</tr>
+						<tr>
+							<td>LG</td>
+						</tr>
+						<tr>
+							<td>두산</td>
+						</tr>
+						<tr>
+							<td>한화</td>
+						</tr>
+						<tr>
+							<td>넥센</td>
+						</tr>
+						<tr>
+							<td>KIA</td>
+						</tr>
+						<tr>
+							<td>SK</td>
+						</tr>
+						<tr>
+							<td>부산</td>
+						</tr>
+
+					</table>
 				</div>
-				<div id="sub_content">
-					<!-- Button to trigger modal -->
+				<div id="join_content">
+					
 				</div>
+
 			</div>
 				
 			<div id="footer">
