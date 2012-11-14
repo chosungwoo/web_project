@@ -5,6 +5,7 @@
 		<title>SupportMain</title>
 		<link href="./stylesheets/reset.css" rel="stylesheet" type="text/css">
 		<link href="./stylesheets/main.css" rel = "stylesheet" type="text/css">
+		<link href="./stylesheets/join.css" rel = "stylesheet" type="text/css">
 		<link href="./stylesheets/bootstrap.css" rel = "stylesheet" type="text/css">
 		<script src = 'jquery-1.8.2.min.js'></script>
 		<script src = 'bootstrap.min.js'></script>
@@ -71,6 +72,24 @@
  					window.open(url,"_blank","width="+intWidth+",height="+intHeight+",resizeable=1,scrollbars=1");
  				}
     		}
+/*
+			$(document).ready(function(){
+			  	$("#location").click(function(){
+			    	$("#sub_location").fadeIn();
+			 	});
+				
+				$("#location").mouseout(function(){
+			    	$("#sub_location").fadeOut();			    
+			  	});
+			  	$("#baseball_team").mouseover(function(){
+			    	$("#sub_baseball_team").fadeIn();
+			 	});
+				
+				$("#baseball_team").mouseout(function(){
+			    	$("#sub_baseball_team").fadeOut();			    
+			  	});
+			  	*/
+			});
 
 		</script>
 		<!-- Modal -->
@@ -101,7 +120,11 @@
 					<center>
 						<div border="0" style="margin:auto">
 							<span class="loginButton"><input name="login" type="submit" value="로그인" /></span>
-							<span class="JoinButton"><input name="Join" type="submit" value="회원가입"/></span>	
+							<span class="JoinButton">
+								<a href="#myModal2" role="button" data-toggle="modal">
+									<input name="Join" type="submit" value="회원가입" data-dismiss="modal">
+								</a>
+							</span>	
 						</div>
 					</center>
 					
@@ -150,8 +173,8 @@
 							</tr>
 							<tr>
 								<th>프로필 사진</th>
-								<td><input type="text"/>
-									<input type="button" value="찾아보기"/>
+								<td><input type="file"/>
+									
 								</td>
 							</tr>
 						</table>
@@ -185,60 +208,38 @@
 			</div>
 			<div id="content">
 				<div id="filtering">
-					<table border="0">
-						<tr>
-							<th><input type="search" name="search" value="검색할 지역은?"></th>
-						</tr>
-						<tr>
-							<th>지역</th>
-						</tr>
-						<tr>
-							<td>서울</td>
-						</tr>
-						<tr>
-							<td>대전</td>
-						</tr>
-						<tr>
-							<td>대구</td>
-						</tr>
-						<tr>
-							<td>부산</td>
-						</tr>
-						<tr>
-							<th>야구팀</th>
-						</tr>
-						<tr>
-							<td>삼성</td>
-						</tr>
-						<tr>
-							<td>롯데</td>
-						</tr>
-						<tr>
-							<td>LG</td>
-						</tr>
-						<tr>
-							<td>두산</td>
-						</tr>
-						<tr>
-							<td>한화</td>
-						</tr>
-						<tr>
-							<td>넥센</td>
-						</tr>
-						<tr>
-							<td>KIA</td>
-						</tr>
-						<tr>
-							<td>SK</td>
-						</tr>
-						<tr>
-							<td>부산</td>
-						</tr>
+					<input type="search" name="search" value="검색할 지역은?"></th>
+					<div id="location">
+						<h1>지역</h1>
+						<div id="sub_location" >
+							<ul>
+								<li>서울</li>
+								<li>대전</li>
+								<li>대구</li>
+								<li>부산</li>
+							</ul>
+						</div>
+					</div>
 
-					</table>
+					<div id="baseball_team">
+						<h1>야구팀</h1>
+					
+						<div id = "sub_baseball_team">
+							<ul>
+								<li>롯데</li>
+								<li>KIA</li>
+								<li>LG</li>
+								<li>삼성</li>
+								<li>한화</li>
+								<li>넥센</li>
+								<li>SK</li>
+								<li>두산</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<div id="join_content">
-					
+					sefklamselfkmlk
 				</div>
 
 			</div>
@@ -252,3 +253,4 @@
 		</div>
 	</body>
 </html>
+<

@@ -71,7 +71,6 @@
  					window.open(url,"_blank","width="+intWidth+",height="+intHeight+",resizeable=1,scrollbars=1");
  				}
     		}
-
 		</script>
 		<!-- Modal -->
 		<div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -101,7 +100,11 @@
 					<center>
 						<div border="0" style="margin:auto">
 							<span class="loginButton"><input name="login" type="submit" value="로그인" /></span>
-							<span class="JoinButton"><input name="Join" type="submit" value="회원가입"/></span>	
+							<span class="JoinButton">
+								<a href="#myModal2" role="button" data-toggle="modal">
+									<input name="Join" type="submit" value="회원가입" data-dismiss="modal">
+								</a>
+							</span>	
 						</div>
 					</center>
 					
@@ -150,8 +153,8 @@
 							</tr>
 							<tr>
 								<th>프로필 사진</th>
-								<td><input type="text"/>
-									<input type="button" value="찾아보기"/>
+								<td><input type="file"/>
+									
 								</td>
 							</tr>
 						</table>

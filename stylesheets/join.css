@@ -1,0 +1,27 @@
+#filtering{
+	margin:30px 20px 0 40px;
+	float:left;
+}
+
+#location, #baseball_team{
+	width:200px;
+	height: 100px;
+}
+#sub_location, #sub_baseball_team{
+	width:200px;
+	height: 100px
+	display: none;
+
+
+}
+#sub_location li, #sub_baseball_team li{
+	list-style: none;
+}
+#join_content{
+	float: left;
+	margin:30px 20px 0 40px;
+	background-color: #eee;
+	width:600px;
+	height:700px;
+	border:1;
+}

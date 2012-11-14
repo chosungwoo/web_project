@@ -52,10 +52,10 @@ a:hover, a:active{color:#C23700;}
 	background-color: #eee; 
 	padding: 0;
 }
-#header_right img{ 
+#header_right { 
 	width:400px;
 	border:none;
-	
+	float :left;	
 }
 #header a{font-size: 20px; color: #eee;}
 
