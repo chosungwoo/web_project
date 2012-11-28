@@ -6,7 +6,7 @@ html{
 }
 /* Basic */
 h1{font-size : 14px; line-height : 28px; font-weight : bold;}
-h2{font-size : 12px; line-height : 24px; font-weight : bold;}
+h2{font-size : 12px; line-height : 15px; font-weight : bold;}
 a:visited, a:link {color:#C20A00; text-decoration:none;}
 a:hover, a:active{color:#C23700;}
 
@@ -50,8 +50,8 @@ a:hover, a:active{color:#C23700;}
 /* content */
 #content { 
 	width:960px;
-	height:700px;
-	background-color: #fff;
+	height:1280px;
+	background-color: #eee;
 	float:left;
 }
 
@@ -59,8 +59,17 @@ a:hover, a:active{color:#C23700;}
 	line-height: 20px;
 	padding: 10px 2px;
 }
-#content .btn{
-	float:left;
+
+/*--btngroup--*/
+#btngroup {
+	width:960px;
+	height:200px;
+	background: #eee;
+	text-align: center;
+	padding: 50px 0;
+}
+#btngroup .btn{
+	text-decoration: none;
 }
 /* -- footer -- */
 #footer{
